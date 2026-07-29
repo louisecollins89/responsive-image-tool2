@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Image Guidance</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+<div class="page">
+
+    <header>
+
+        <h1>Responsive Image Guidance</h1>
+
+        <p>
+            Test how image choices behave across different layouts and breakpoints.
+            The simulator highlights where important content may be lost.
+        </p>
+
+    </header>
+
+
+    <main class="workspace">
+
+
+        <aside class="controls">
+
+
+            <h2>Breakpoint</h2>
+
+
+            <label>
+                <input type="radio" name="breakpoint" value="1090" data-layout="desktop" checked>
+                1440px - No navigation
+            </label>
+
+
+            <label>
+                <input type="radio" name="breakpoint" value="813" data-layout="desktop">
+                1440px - With navigation
+            </label>
+
+
+            <label>
+                <input type="radio" name="breakpoint" value="730" data-layout="desktop">
+                1000px - No navigation
+            </label>
+
+
+            <label>
+                <input type="radio" name="breakpoint" value="545" data-layout="desktop">
+                1000px - With navigation
+            </label>
+
+
+            <label>
+                <input type="radio" name="breakpoint" value="580" data-layout="tablet">
+                Tablet - 800px
+            </label>
+
+
+            <label>
+                <input type="radio" name="breakpoint" value="375" data-layout="mobile">
+                Mobile - 375px
+            </label>
+
+
+
+            <hr>
+
+
+            <h2>Text length</h2>
+
+
+            <label>
+                <input type="radio" name="text" value="short">
+                Short
+            </label>
+
+
+            <label>
+                <input type="radio" name="text" value="medium" checked>
+                Medium
+            </label>
+
+
+            <label>
+                <input type="radio" name="text" value="long">
+                Long
+            </label>
+
+
+
+            <hr>
+
+
+            <label>
+                <input type="checkbox" id="safeArea" checked>
+                Show safe area
+            </label>
+
+<section class="guidance">
+
+    <h2>Current guidance</h2>
+
+    <p id="guidanceText">
+        Desktop layout. Keep important subjects away from edges.
+    </p>
+
+    <div id="riskLevel" class="risk">
+        Low risk
+    </div>
+
+</section>
+
+        </aside>
+
+
+
+
+        <section class="preview">
+
+
+            <div class="component desktop" id="component">
+
+
+                <div class="image-container">
+
+
+                    <img src="images/good/good-example.jpg" alt="Example image">
+
+
+                    <div class="safe-area">
+
+    <span>
+        Important content area
+    </span>
+
+</div>
+
+
+                </div>
+
+
+
+                <div class="content">
+
+
+                    <h2>
+                        Flexible content component
+                    </h2>
+
+
+                    <div id="copy">
+
+                        <p>
+                            This component grows depending on the amount of editorial content.
+                        </p>
+
+
+                        <p>
+                            The image remains cropped using object-fit cover.
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    
+
+    </section> <section class="examples">
+
+    <h2>Choosing the right image</h2>
+
+    <p>
+        Images should have enough space around the focal point so they survive every breakpoint.
+    </p>
+
+
+    <div class="example-grid">
+
+
+        <div class="example-card good">
+
+            <h3>✓ Recommended image</h3>
+
+            <img src="images/good/good-example.jpg" alt="Recommended image example">
+
+            <ul>
+                <li>Focal point is central</li>
+                <li>Flexible cropping</li>
+                <li>Works on desktop and mobile</li>
+            </ul>
+
+        </div>
+
+
+
+        <div class="example-card bad">
+
+            <h3>✕ Avoid this type of image</h3>
+
+            <img src="images/bad/bad-example.jpg" alt="Image that will crop badly">
+
+            <ul>
+                <li>Important detail near edge</li>
+                <li>Fails when component narrows</li>
+                <li>Mobile crop loses information</li>
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+<section class="requirements">
+
+<h2>Image requirements</h2>
+
+<div class="requirements-grid">
+
+<div>
+<h3>Recommended source</h3>
+<p>2400px × 1600px</p>
+</div>
+
+
+<div>
+<h3>Preferred ratio</h3>
+<p>3:2 landscape</p>
+</div>
+
+
+<div>
+<h3>Focal point</h3>
+<p>Centre 50% of image</p>
+</div>
+
+
+<div>
+<h3>Avoid</h3>
+<p>Text, edge subjects, busy backgrounds</p>
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
